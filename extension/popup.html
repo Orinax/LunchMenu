@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunch Menu</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="app-title">🍱 Lunch Menu</h1>
+      <div class="controls">
+        <select id="menuType" title="Menu type">
+          <option value="alacarte">Ala Carte</option>
+          <option value="program">Program</option>
+        </select>
+        <button id="weekBtn" class="btn btn-secondary active" title="Show whole week">Week</button>
+        <button id="todayBtn" class="btn btn-secondary" title="Show today only">Today</button>
+        <a href="#" id="optionsLink" title="Settings" class="settings-icon">⚙</a>
+      </div>
+    </header>
+
+    <!-- Week label -->
+    <div id="weekLabel" class="week-label"></div>
+
+    <!-- Content area -->
+    <div id="content">
+      <div class="loading">Loading…</div>
+    </div>
+
+    <!-- Footer: last fetched -->
+    <footer id="footer" class="footer"></footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

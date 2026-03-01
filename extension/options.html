@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunch Menu – Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      color: #212529;
+      background: #f8f9fa;
+      padding: 24px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 18px; margin-bottom: 16px; color: #1a73e8; }
+    label { display: block; font-weight: 600; margin-bottom: 4px; }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    input[type="text"]:focus { outline: none; border-color: #1a73e8; }
+    .btn {
+      padding: 8px 20px;
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .btn:hover { background: #1558b0; }
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #28a745;
+    }
+    .note {
+      font-size: 11px;
+      color: #6c757d;
+      margin-top: 6px;
+    }
+    .managed-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-bottom: 16px;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚙ Lunch Menu Settings</h1>
+
+  <div id="managedNotice" class="managed-notice" style="display:none">
+    🔒 The backend URL is managed by your administrator and cannot be changed here.
+  </div>
+
+  <label for="apiUrl">Backend API URL</label>
+  <input type="text" id="apiUrl" placeholder="http://localhost:8000" />
+  <p class="note">
+    Enter the base URL of your LunchMenu backend (no trailing slash).<br>
+    Example: <code>http://localhost:8000</code> or <code>https://your-server.example.com</code>
+  </p>
+
+  <button class="btn" id="saveBtn">Save</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

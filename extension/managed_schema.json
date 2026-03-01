@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "MENU_API_URL": {
+      "type": "string",
+      "description": "Base URL of the LunchMenu backend API (e.g. https://your-server.example.com)"
+    }
+  }
+}
